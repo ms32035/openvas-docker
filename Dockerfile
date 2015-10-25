@@ -93,9 +93,9 @@ RUN apt-get update -y && \
         make install && \
     mkdir /redis && \
         cd /redis && \
-        wget http://download.redis.io/releases/redis-2.8.19.tar.gz  && \
-            tar zxvf redis-2.8.19.tar.gz && \
-            cd redis-2.8.19 && \
+        wget http://download.redis.io/releases/redis-3.0.5.tar.gz  && \
+            tar zxvf redis-3.0.5.tar.gz && \
+            cd redis-3.0.5 && \
             make -j $(nproc)&& \
             make install && \
             rm -fr /redis && \
@@ -149,4 +149,4 @@ ADD config/redis.config /etc/redis/redis.config
 CMD bash /openvas/start.sh
 
 # Expose UI
-EXPOSE 443 9390 9391 9392
+EXPOSE 443 9292 9390 9391 9392
