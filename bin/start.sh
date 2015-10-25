@@ -43,7 +43,7 @@ done
 
 echo "Starting Arachni Web UI"
 
-/opt/arachni/bin/arachni_web &
+/opt/arachni/bin/arachni_web -o 0.0.0.0 &
 
 echo "Done."
 
