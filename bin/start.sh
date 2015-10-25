@@ -16,7 +16,7 @@ echo "Rebuilding openvasmd"
 n=1
 until [ $n -eq 4 ]
 do
-         timeout 10m openvasmd --rebuild -v;
+         timeout 15m openvasmd --rebuild -v;
         if [ $? -eq 0 ]; then
                  break;
          fi
@@ -40,6 +40,10 @@ do
          echo "Re-running openvas-check-setup, attempt: $n"
          n=$[$n+1]
 done
+
+echo "Starting Arachni Web UI"
+
+/opt/arachni/bin/arachni_web &
 
 echo "Done."
 
