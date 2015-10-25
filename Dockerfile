@@ -121,9 +121,9 @@ RUN apt-get update -y && \
         make install && \
     cd / && \
     cd /tmp && \
-    wget https://github.com/Arachni/arachni/releases/download/v1.2.1/arachni-1.2.1-0.5.7.1-linux-x86_64.tar.gz && \
-        tar -zxvf arachni-1.2.1-0.5.7.1-linux-x86_64.tar.gz && \
-        mv arachni-1.2.1-0.5.7.1 /opt/arachni && \
+    wget https://github.com/Arachni/arachni/releases/download/v1.3.2/arachni-1.3.2-0.5.9-linux-x86_64.tar.gz && \
+        tar -zxvf arachni-1.3.2-0.5.9-linux-x86_64.tar.gz && \
+        mv arachni-1.3.2-0.5.9 /opt/arachni && \
         ln -s /opt/arachni/bin/* /usr/local/bin/ && \
     cd ~ && \
     wget https://github.com/sullo/nikto/archive/master.zip && \
